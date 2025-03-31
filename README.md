@@ -1,2 +1,2 @@
 # Ariandel
-STUDY
+Painted world of Ariandel
