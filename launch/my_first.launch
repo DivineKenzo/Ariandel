@@ -1,0 +1,18 @@
+<launch>
+  <arg name="user_input" default="chatter"/>
+  <group ns="new_ns">
+  
+    <include file="$(find gvozdev_pkg)/launch/another_one.launch">
+      <arg name="user_input" value="$(arg user_input)"/>
+    </include>
+    
+    <node name="receiver" pkg="rospy_tutorials" type="listener.py" output="screen">
+      <remap from="chatter" to="$(arg user_input)"/>
+    </node>
+    
+    <node name="sender" pkg="rospy_tutorials" type="talker.py" output="screen">
+      <remap from="chatter" to="$(arg user_input)"/>
+    </node>
+  </group>
+</launch>
+

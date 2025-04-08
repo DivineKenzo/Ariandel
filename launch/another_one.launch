@@ -1,0 +1,6 @@
+<launch>
+  <arg name="user_input" default="chatter"/>
+  <node name="listener_cpp" pkg="roscpp_tutorials" type="listener" output="screen">
+    <remap from="chatter" to="$(arg user_input)"/>
+  </node>
+</launch>

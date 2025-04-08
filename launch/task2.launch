@@ -1,0 +1,6 @@
+<launch>
+    
+    <node name="Polynominal_node" pkg="gvozdev_pkg" type="Polynominal_node.py" output="screen"/>
+    <node name="Summing_node" pkg="gvozdev_pkg" type="Summing_node.py" output="screen"/>
+    
+</launch>
