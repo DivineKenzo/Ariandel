@@ -1,0 +1,10 @@
+<launch>
+    <arg name="gazebo_gui" default="false"/> 
+    <include file="$(find gvozdev_pkg)/launch/turtlebot3_world.launch">
+        <arg name="gazebo_gui" value="$(arg gazebo_gui)"/>
+    </include>
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+        <param name="publish_frequency" type="double" value="50.0" />
+    </node>
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find gvozdev_pkg)/rviz/sim_initial.rviz"/>
+</launch>
