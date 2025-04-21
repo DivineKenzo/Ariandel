@@ -1,0 +1,5 @@
+base_frame: base_footprint
+map_frame: map
+delta: 0.05
+linearUpdate: 0.2
+angularUpdate: 0.2
